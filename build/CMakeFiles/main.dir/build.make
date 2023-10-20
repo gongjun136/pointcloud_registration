@@ -191,6 +191,9 @@ main: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.4.2.0
 main: /usr/lib/x86_64-linux-gnu/libopencv_viz.so.4.2.0
 main: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.2.0
 main: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.2.0
+main: /usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so
+main: /usr/lib/x86_64-linux-gnu/libpthread.so
+main: tbb_cmake_build/tbb_cmake_build_subdir_release/libtbb.so.2
 main: /usr/lib/x86_64-linux-gnu/libpcl_surface.so
 main: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so
 main: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so

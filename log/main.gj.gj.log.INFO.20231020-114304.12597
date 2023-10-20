@@ -1,0 +1,4 @@
+Log file created at: 2023/10/20 11:43:04
+Running on machine: gj
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1020 11:43:04.008165 12597 icp_3d.h:62] source center: 0.0903871 00.407958 00.251414

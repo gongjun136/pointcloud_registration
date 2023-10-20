@@ -33,6 +33,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/ni"
   "/usr/include/openni2"
   "/usr/include/opencv4"
+  "../thirdparty/tbb/oneTBB-2019_U8/oneTBB-2019_U8/include"
   )
 
 # Targets to which this target links.

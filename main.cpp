@@ -65,12 +65,18 @@ int main(int argc, char **argv)
     sad::evaluate_and_call(
         [&]()
         {
+            auto start = std::chrono::high_resolution_clock::now();
             sad::Icp3d icp;
             icp.SetSource(source);
             icp.SetTarget(target);
             // icp.SetGroundTruth(gt_pose);
             SE3 pose;
             success = icp.AlignP2P(pose);
+            auto end = std::chrono::high_resolution_clock::now();
+
+            auto p2p_duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+            LOG(INFO)<< "Parallel time: " << p2p_duration << " ms" ;
+
             if (success)
             {
                 LOG(INFO) << "icp p2p align success, pose: " << std::fixed << std::setprecision(8) << pose.so3().unit_quaternion().coeffs().transpose()
@@ -173,6 +179,7 @@ int main(int argc, char **argv)
         [&]()
         {
             pcl::IterativeClosestPoint<sad::PointType, sad::PointType> icp_pcl;
+
             icp_pcl.setInputSource(source);
             icp_pcl.setInputTarget(target);
             sad::CloudPtr output_pcl(new sad::PointCloudType);
